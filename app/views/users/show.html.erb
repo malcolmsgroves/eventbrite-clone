@@ -1,0 +1,10 @@
+<% provide(:title, 'Profile') %>
+<h1>User: <%= @user.username %></h1>
+<div class='container'>
+  <div class='upcoming_events'>
+    <%= render @upcoming_events %>
+  </div>
+  <div class='past_events'>
+    <%= render @past_events %>
+  </div>
+</div>

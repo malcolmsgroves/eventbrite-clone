@@ -1,0 +1,8 @@
+<h3><%= @event.name %></h3>
+<span>Hosted By: <%= @event.host.username %></span>
+<p><%= @event.description %></p>
+<span><%= "Date: #{@event.date}, Location: #{@event.location}" %></span>
+<div>
+  <h4>Invited Users</h4>
+  <%= render @invitees %>
+</div>
