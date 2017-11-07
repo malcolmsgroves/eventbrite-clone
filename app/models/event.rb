@@ -9,6 +9,7 @@ class Event < ApplicationRecord
   validates :date, presence: true
   validates :location, presence: true
   validates :description, length: { maximum: 250 }
+  
 
   def self.upcoming_events
     self.where('date >= ?', Date.today).order(date: :desc).all
@@ -17,6 +18,8 @@ class Event < ApplicationRecord
   def self.past_events
     self.where('date < ?', Date.today).order(date: :desc).all
   end
+
+
 =begin
   has_many :invited_users, through: :invitations,
                            source: :invited_user
